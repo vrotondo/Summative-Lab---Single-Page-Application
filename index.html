@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dictionary App</h1>
+            <p class="app-description">Look up word definitions, pronunciations, and more</p>
+        </header>
+
+        <div class="error-message" id="error-message" role="alert"></div>
+
+        <form class="search-form" id="search-form">
+            <input 
+                type="text" 
+                class="search-input" 
+                id="search-input" 
+                placeholder="Enter a word" 
+                aria-label="Search for a word"
+                required
+            >
+            <button 
+                type="submit" 
+                class="search-button" 
+                aria-label="Search"
+            >
+                Search
+            </button>
+        </form>
+
+        <div class="loading" id="loading">
+            <div class="loading-spinner" aria-hidden="true"></div>
+            <p>Searching...</p>
+        </div>
+
+        <main class="results-container" id="results-container">
+            <div class="word-header">
+                <h2 class="word-title" id="word-title"></h2>
+                <div class="phonetics">
+                    <span class="pronunciation" id="pronunciation"></span>
+                    <button class="audio-button" id="audio-button" aria-label="Listen to pronunciation">
+                        ♬
+                    </button>
+                </div>
+            </div>
+
+            <div id="meanings-container">
+                <!-- Meanings will be dynamically inserted here -->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
